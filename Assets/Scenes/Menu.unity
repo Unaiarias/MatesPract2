@@ -163,22 +163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 146582539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed00fd4dd63c304c8840a492f26b8f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dc246324d175874dba27814459bf749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resultado: 8
-  cubos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  materialCorrecto: {fileID: 0}
-  materialIncorrecto: {fileID: 0}
+  cubos: []
 --- !u!1 &252032539
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,22 +208,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 252032539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 367f44590bd074e4181051f09950c465, type: 3}
+  m_Script: {fileID: 11500000, guid: eb309ae4a795da74d8ea51c751213b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resultado: 3
-  cubos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  materialCorrecto: {fileID: 0}
-  materialIncorrecto: {fileID: 0}
+  cubos: []
 --- !u!224 &576622611 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1681340275055403751, guid: d07f50d088d477548991fb86bf7b9f6e,
@@ -430,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840616169}
-  - component: {fileID: 840616168}
+  - component: {fileID: 840616170}
   m_Layer: 0
   m_Name: UIFacil
   m_TagString: Untagged
@@ -438,31 +414,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &840616168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840616167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 813522ba2a1e26140ba5e2a1774ec4c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Resultado: 8
-  cubos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  materialCorrecto: {fileID: 0}
-  materialIncorrecto: {fileID: 0}
 --- !u!4 &840616169
 Transform:
   m_ObjectHideFlags: 0
@@ -478,6 +429,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840616170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840616167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dee0633a247a5a4bb2e580f4a43b395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubos: []
 --- !u!1 &886929493
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,8 +931,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 252032541}
-        m_TargetAssemblyTypeName: Binaria, Assembly-CSharp
-        m_MethodName: Medio
+        m_TargetAssemblyTypeName: Binaria1, Assembly-CSharp
+        m_MethodName: PlayGameMedium
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1100,8 +1064,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 146582541}
-        m_TargetAssemblyTypeName: Ternario, Assembly-CSharp
-        m_MethodName: Dificil
+        m_TargetAssemblyTypeName: Ternaria1, Assembly-CSharp
+        m_MethodName: PlayGameHard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1279,7 +1243,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 840616168}
+      objectReference: {fileID: 840616170}
+    - target: {fileID: 595922078103410285, guid: 5efdbe72cb13f7a4ca3e4eabdacd22d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGameEasy
+      objectReference: {fileID: 0}
+    - target: {fileID: 595922078103410285, guid: 5efdbe72cb13f7a4ca3e4eabdacd22d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Lineal, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1244710768180384831, guid: 5efdbe72cb13f7a4ca3e4eabdacd22d0,
         type: 3}
       propertyPath: m_Name
