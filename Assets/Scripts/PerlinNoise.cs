@@ -15,12 +15,15 @@ public class PerlinNoise : MonoBehaviour
 
     private float timeAux = 0.0f;
 
-
+    private int valor1;
     private int valor;
 
     public GameObject Objeto;
+    public GameObject Objeto2;
     public GameObject Spawner;
     public GameObject PowerUp;
+
+    public float MiejeY;
 
     void Start()
     {
@@ -63,8 +66,20 @@ public class PerlinNoise : MonoBehaviour
 
                 if (color < 0.4f) 
                 {
-                    
+
+                 valor1 = Random.Range(0, 100);
+
+                   if (valor1 <= 50f)
+                   {
                     GameObject clon = Instantiate(Objeto, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+
+
+                   }
+                   else if (valor1 >= 51f)
+                   {
+                    GameObject clon = Instantiate(Objeto2, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+                   }
+
                 }
 
                 if (color > 0.4f)
@@ -75,11 +90,12 @@ public class PerlinNoise : MonoBehaviour
                     {
                      GameObject clon = Instantiate(Spawner, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
 
-                }
+
+                    }
                     else if (valor > 95f)
                     {
-                     GameObject clon = Instantiate(PowerUp, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
-                }
+                     GameObject clon = Instantiate(PowerUp, new Vector3(x, MiejeY, y), Quaternion.identity) as GameObject;
+                    }
 
 
                 }
