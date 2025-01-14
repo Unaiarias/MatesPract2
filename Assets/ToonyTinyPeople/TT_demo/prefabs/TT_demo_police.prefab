@@ -186,6 +186,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadSpawner: 10
+  EnemyAnimator: {fileID: 8619338777999598093}
+  AlertRange: 29.1
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  IsAlert: 0
+  PlayerT: {fileID: 0}
 --- !u!65 &6372665213666137759
 BoxCollider:
   m_ObjectHideFlags: 0

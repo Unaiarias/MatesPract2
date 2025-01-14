@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Viapix_PlayerParams;
 
-namespace Viapix_HealingItem
-{
+
+
+
 
     public class Viapix_HealingItem : MonoBehaviour
     {
@@ -12,12 +12,12 @@ namespace Viapix_HealingItem
         [SerializeField]
         float rotationSpeedX, rotationSpeedY, rotationSpeedZ;
 
-        [SerializeField]
-        int healingAmount;
+       
+         public float healingAmount;
 
-        GameObject playerObj;
+        public GameObject playerObj;
 
-        private void Start()
+        void Start()
         {
             playerObj = GameObject.FindGameObjectWithTag("Player");
         }
@@ -34,18 +34,17 @@ namespace Viapix_HealingItem
             {
                 Destroy(gameObject);
             }
-        }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Player"))
+
+            if (other.gameObject.tag == "Player")
             {
-                playerObj.GetComponent<Viapix_PlayerHP>().playerHP += healingAmount;
+                playerObj.GetComponent<JugadorMov>().vidaActual += healingAmount;
+
 
                 Destroy(gameObject);
 
-                print("Player HP: " + playerObj.GetComponent<Viapix_PlayerHP>().playerHP);
             }
         }
+        
     }
-}
+
 

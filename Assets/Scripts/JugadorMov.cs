@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class JugadorMov : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class JugadorMov : MonoBehaviour
     public float gravedad = 9.8f;
     private Vector3 direccion = Vector3.zero;
 
+    public Image barraDeVida;
 
+    public float vidaActual;
+
+    public float vidaMaxima;
+
+    //public Viapix_HealingItem health;
     void Start()
     {
 
@@ -20,6 +27,10 @@ public class JugadorMov : MonoBehaviour
 
     void Update()
     {
+        barraDeVida.fillAmount = vidaActual / vidaMaxima;
+
+        
+
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
         {
@@ -58,6 +69,7 @@ public class JugadorMov : MonoBehaviour
 
     }
 
+    
     
     void OnControllerColliderHit(ControllerColliderHit hit)
     {

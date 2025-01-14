@@ -9,17 +9,17 @@ public class Texto : MonoBehaviour
 
     public TMP_Text textoTiempo;
     public TMP_Text textoVidas;
-    int vidas;
+    
 
     void Start()
     {
-        vidas = 5;
+        
     }
 
    
     void Update()
     {
-        textoVidas.text = "Vidas: " + vidas;
+        textoVidas.text = "Vidas: ";
         textoTiempo.text = "Contador: " + Time.time.ToString("F2");
     }
 }
