@@ -9,6 +9,7 @@ public class Texto : MonoBehaviour
 
     public TMP_Text textoTiempo;
     public TMP_Text textoVidas;
+
     
 
     void Start()
@@ -21,5 +22,8 @@ public class Texto : MonoBehaviour
     {
         textoVidas.text = "Vidas: ";
         textoTiempo.text = "Contador: " + Time.time.ToString("F2");
+
+
+         
     }
 }

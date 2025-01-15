@@ -36,6 +36,7 @@ public class JugadorMov : MonoBehaviour
         }
 
         
+        
 
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
