@@ -6,7 +6,7 @@ public class Turret : MonoBehaviour
 {
     public Gun gun;
     public MountPoint[] mountPoints;
-    public Transform target;
+    public GameObject target;
 
     public float velocidadSpawner;
 
@@ -15,6 +15,7 @@ public class Turret : MonoBehaviour
     {
         //Jugador = FindObjectOfType(JugadorMov);
         //target = Jugador.transform;
+        target = GameObject.Find("Jugador");
     }
 
     void OnDrawGizmos()
@@ -28,11 +29,11 @@ public class Turret : MonoBehaviour
         {
             var hardpoint = mountPoint.transform;
             var from = Quaternion.AngleAxis(-mountPoint.angleLimit / 2, hardpoint.up) * hardpoint.forward;
-            var projection = Vector3.ProjectOnPlane(target.position - hardpoint.position, hardpoint.up);
+            var projection = Vector3.ProjectOnPlane(target.transform.position - hardpoint.position, hardpoint.up);
 
             // projection line
             Handles.color = Color.white;
-            Handles.DrawDottedLine(target.position, hardpoint.position + projection, dashLineSize);
+            Handles.DrawDottedLine(target.transform.position, hardpoint.position + projection, dashLineSize);
 
             // do not draw target indicator when out of angle
             if (Vector3.Angle(hardpoint.forward, projection) > mountPoint.angleLimit / 2) return;
@@ -60,7 +61,7 @@ public class Turret : MonoBehaviour
         var aimed = true;
         foreach (var mountPoint in mountPoints)
         {
-            if (!mountPoint.Aim(target.position))
+            if (!mountPoint.Aim(target.transform.position))
             {
                 aimed = false;
             }

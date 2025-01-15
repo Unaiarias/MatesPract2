@@ -37,7 +37,8 @@ using UnityEngine;
 
             if (other.gameObject.tag == "Player")
             {
-                playerObj.GetComponent<JugadorMov>().vidaActual += healingAmount;
+              if (playerObj.GetComponent<JugadorMov>().vidaActual + healingAmount > 100) playerObj.GetComponent<JugadorMov>().vidaActual = 100;
+              else playerObj.GetComponent<JugadorMov>().vidaActual += healingAmount;
 
 
                 Destroy(gameObject);

@@ -8,7 +8,7 @@ public class BulletMovement : MonoBehaviour
     public float timelife = 5f;
     public float damageAmount;
 
-    
+    public GameObject target;
 
     public GameObject playerObj;
 
@@ -24,7 +24,8 @@ public class BulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)

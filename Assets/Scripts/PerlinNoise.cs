@@ -25,6 +25,8 @@ public class PerlinNoise : MonoBehaviour
 
     public float MiejeY;
 
+    public float MiejeSpawn;
+
     void Start()
     {
         offsetX = Random.Range(0f, 99999f);
@@ -88,7 +90,7 @@ public class PerlinNoise : MonoBehaviour
 
                     if (valor < 5f)
                     {
-                     GameObject clon = Instantiate(Spawner, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
+                     GameObject clon = Instantiate(Spawner, new Vector3(x, MiejeSpawn, y), Quaternion.identity) as GameObject;
 
 
                     }
