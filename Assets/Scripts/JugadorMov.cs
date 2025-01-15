@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JugadorMov : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class JugadorMov : MonoBehaviour
     void Update()
     {
         barraDeVida.fillAmount = vidaActual / vidaMaxima;
+
+        if (barraDeVida.fillAmount == 0.0f)
+        {
+            SceneManager.LoadScene("MiniJuegoFacil");
+        }
 
         
 
@@ -68,9 +74,16 @@ public class JugadorMov : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Destroyer")
+        {
+            SceneManager.LoadScene("MiniJuegoFacil");
+        }
 
-    
-    
+    }
+
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Debug.Log("Colisión con un objeto de tipo: " + hit.gameObject.tag);

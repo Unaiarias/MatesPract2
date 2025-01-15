@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,8 @@ public class SpawnerMov : MonoBehaviour
     public float AlertRange = 10f;
     public LayerMask PlayerMask;
     public bool IsAlert;
-   
+
+    public Transform[] gunPoints;
     void Start()
     {
         
@@ -29,6 +31,7 @@ public class SpawnerMov : MonoBehaviour
         if (IsAlert)
         {
             EnemyAnimator.SetBool("Disparo", true);
+            GameObject clon = Instantiate(Bala, new Vector3(transform.position.x, transform.position.z, transform.position.y), Quaternion.identity) as GameObject;
         }
         else
         {

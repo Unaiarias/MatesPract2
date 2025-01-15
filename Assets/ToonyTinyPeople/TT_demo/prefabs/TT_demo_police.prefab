@@ -186,13 +186,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadSpawner: 10
+  Bala: {fileID: 8106690328438845977, guid: 4c6020ed0fbab9e4dbc456055a4722fb, type: 3}
   EnemyAnimator: {fileID: 8619338777999598093}
   AlertRange: 29.1
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
   IsAlert: 0
-  PlayerT: {fileID: 0}
+  gunPoints:
+  - {fileID: 0}
 --- !u!65 &6372665213666137759
 BoxCollider:
   m_ObjectHideFlags: 0

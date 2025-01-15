@@ -85,6 +85,8 @@ public class Lineal : MonoBehaviour
                 CambiarColorCubo(number, colorVerde);
                 Debug.Log("¡Correcto! El jugador adivinó el número. ¡Fin del juego!");
                 EndGame();
+
+                SceneManager.LoadScene("Terreno");
             }
             else
             {
@@ -123,6 +125,8 @@ public class Lineal : MonoBehaviour
                 CambiarColorCubo(currentIndex, colorAmarillo);
                 Debug.Log("¡La computadora adivinó el número! ¡Fin del juego!");
                 EndGame();
+
+                SceneManager.LoadScene("Inicio");
             }
             else
             {

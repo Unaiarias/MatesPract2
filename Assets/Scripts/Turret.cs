@@ -9,6 +9,14 @@ public class Turret : MonoBehaviour
     public Transform target;
 
     public float velocidadSpawner;
+
+    public GameObject Jugador;
+    public void Start()
+    {
+        //Jugador = FindObjectOfType(JugadorMov);
+        //target = Jugador.transform;
+    }
+
     void OnDrawGizmos()
     {
 #if UNITY_EDITOR
@@ -64,6 +72,9 @@ public class Turret : MonoBehaviour
             gun.Fire();
         }
     }
+
+    
+
 
     private void OnTriggerEnter(Collider other)
     {

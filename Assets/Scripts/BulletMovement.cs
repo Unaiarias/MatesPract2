@@ -6,16 +6,17 @@ public class BulletMovement : MonoBehaviour
 {
     public float speed = 4f;
     public float timelife = 5f;
+    public float damageAmount;
 
+    
 
-
-
+    public GameObject playerObj;
 
     // Start is called before the first frame update
     void Start()
     {
 
-
+        playerObj = GameObject.FindGameObjectWithTag("Player");
 
 
     }
@@ -28,8 +29,15 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Destroyer")
         {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Player")
+        {
+            playerObj.GetComponent<JugadorMov>().vidaActual -= damageAmount;
+
 
             Destroy(gameObject);
 
