@@ -90,7 +90,7 @@ public class PerlinNoise : MonoBehaviour
 
                     if (valor < 5f)
                     {
-                     GameObject clon = Instantiate(Spawner, new Vector3(x, MiejeSpawn, y), Quaternion.identity) as GameObject;
+                     GameObject clon = Instantiate(Spawner, new Vector3(x, 0, y), Quaternion.identity) as GameObject;
 
 
                     }

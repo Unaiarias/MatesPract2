@@ -163,10 +163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 146582539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc246324d175874dba27814459bf749, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cc702c32f993e04f9ea931d5b0bed8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubos: []
 --- !u!1 &252032539
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,10 +207,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 252032539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb309ae4a795da74d8ea51c751213b59, type: 3}
+  m_Script: {fileID: 11500000, guid: cf72a05d913a13244ba32353061fb090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubos: []
 --- !u!1 &364992044
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,10 +633,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 840616167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dee0633a247a5a4bb2e580f4a43b395, type: 3}
+  m_Script: {fileID: 11500000, guid: b447da653005a4f40ab06d490042651c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubos: []
 --- !u!1 &911355750
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,8 +720,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 840616170}
-        m_TargetAssemblyTypeName: Lineal, Assembly-CSharp
-        m_MethodName: PlayGameEasy
+        m_TargetAssemblyTypeName: UIFacil, Assembly-CSharp
+        m_MethodName: TerrenoFacil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -993,8 +990,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 146582541}
-        m_TargetAssemblyTypeName: Ternaria1, Assembly-CSharp
-        m_MethodName: PlayGameHard
+        m_TargetAssemblyTypeName: UIDificil, Assembly-CSharp
+        m_MethodName: TerrenoDificil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1260,8 +1257,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 252032541}
-        m_TargetAssemblyTypeName: Binaria1, Assembly-CSharp
-        m_MethodName: PlayGameMedium
+        m_TargetAssemblyTypeName: UIMedio, Assembly-CSharp
+        m_MethodName: TerrenoMedio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class JugadorMov : MonoBehaviour
+public class JugadorMovMedio : MonoBehaviour
 {
 
     public float velocidad = 5.0f;
@@ -32,7 +32,7 @@ public class JugadorMov : MonoBehaviour
 
         if (barraDeVida.fillAmount == 0.0f)
         {
-            SceneManager.LoadScene("MiniJuegoFacil");
+            SceneManager.LoadScene("MiniJuegoMedio");
         }
 
         
@@ -79,7 +79,7 @@ public class JugadorMov : MonoBehaviour
     {
         if (other.gameObject.tag == "Destroyer")
         {
-            SceneManager.LoadScene("MiniJuegoFacil");
+            SceneManager.LoadScene("MiniJuegoMedio");
         }
 
     }

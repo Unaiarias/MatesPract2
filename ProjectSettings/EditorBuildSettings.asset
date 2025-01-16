@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniJuegoDificil.unity
     guid: 2463167635d5e76419bbe58744d72294
   - enabled: 1
-    path: Assets/Scenes/Terreno.unity
+    path: Assets/Scenes/TerrenoFacil.unity
     guid: 5a292474e06efe74b83603578476f3c9
+  - enabled: 1
+    path: Assets/Scenes/TerrenoMedio.unity
+    guid: b2bfc2bce738141469dad18c01b31504
+  - enabled: 1
+    path: Assets/Scenes/TerrenoDificil.unity
+    guid: 3fb827854d27f1c4ca010753353f8d5d
   m_configObjects: {}
