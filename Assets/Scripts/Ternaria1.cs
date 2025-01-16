@@ -92,6 +92,8 @@ public class Ternaria1 : MonoBehaviour
                     CambiarColorCubo(number, colorVerde);
                     Debug.Log("¡Correcto! El jugador adivinó el número. ¡Fin del juego!");
                     EndGame();
+
+                    SceneManager.LoadScene("TerrenoDificil");
                 }
                 else
                 {
@@ -144,6 +146,9 @@ public class Ternaria1 : MonoBehaviour
                     CambiarColorCubo(mid1, colorAmarillo);
                     Debug.Log("¡La computadora adivinó el número en mid1! ¡Fin del juego!");
                     EndGame();
+
+                    SceneManager.LoadScene("Inicio");
+
                     return;
                 }
             }

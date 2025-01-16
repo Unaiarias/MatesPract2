@@ -86,7 +86,7 @@ public class Lineal : MonoBehaviour
                 Debug.Log("¡Correcto! El jugador adivinó el número. ¡Fin del juego!");
                 EndGame();
 
-                SceneManager.LoadScene("Terreno");
+                SceneManager.LoadScene("TerrenoFacil");
             }
             else
             {

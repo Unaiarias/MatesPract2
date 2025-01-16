@@ -71,6 +71,8 @@ public class Binaria1 : MonoBehaviour
                     CambiarColorCubo(number, colorVerde);
                     Debug.Log("¡Correcto! El jugador adivinó el número. ¡Fin del juego!");
                     EndGame();
+
+                    SceneManager.LoadScene("TerrenoMedio");
                 }
                 else
                 {
@@ -142,6 +144,8 @@ public class Binaria1 : MonoBehaviour
             CambiarColorCubo(guess, colorAmarillo);
             Debug.Log("¡La computadora adivinó el número! ¡Fin del juego!");
             EndGame();
+
+            SceneManager.LoadScene("Inicio");
         }
         else
         {

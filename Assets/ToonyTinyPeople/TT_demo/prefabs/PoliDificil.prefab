@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 8619338778009177163}
   - component: {fileID: 8619338777999598093}
   - component: {fileID: 6372665213666137759}
-  - component: {fileID: 4547442279895910230}
+  - component: {fileID: -8943890235066483862}
   m_Layer: 0
-  m_Name: TT_demo_police
+  m_Name: PoliDificil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.789995, z: 1}
   m_Center: {x: 0, y: 1.0120412, z: -0}
---- !u!114 &4547442279895910230
+--- !u!114 &-8943890235066483862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,11 +203,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8619338778009079851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a79b26fe4c9f141a853db72f8388bf, type: 3}
+  m_Script: {fileID: 11500000, guid: ced8f7779d501d34090e3d364c1058af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  bala: {fileID: 8106690328438845977, guid: 4c6020ed0fbab9e4dbc456055a4722fb, type: 3}
+  speed: 6
+  bala: {fileID: 8106690328438845977, guid: 32084349cff9ae64fbc19029a1656c2d, type: 3}
 --- !u!1 &8619338778009079855
 GameObject:
   m_ObjectHideFlags: 0
