@@ -175,6 +175,9 @@ public class Ternaria1 : MonoBehaviour
                     CambiarColorCubo(mid2, colorAmarillo);
                     Debug.Log("¡La computadora adivinó el número en mid2! ¡Fin del juego!");
                     EndGame();
+
+                    SceneManager.LoadScene("Inicio");
+
                     return;
                 }
             }
