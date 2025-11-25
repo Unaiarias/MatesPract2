@@ -6,6 +6,15 @@ Realizo yo solo el proyecto.
 ## Plan de Sprints
 <img width="647" height="227" alt="image" src="https://github.com/user-attachments/assets/dcd6f0e3-7fd2-44e6-aac9-eead93d4d2ac" />
 
+## Componentes
+-Dos potenciómetros
+
+-Un botón
+
+-Un contador
+
+-Cables y resistencias
+
 ## Día 11/11/25
 Este día hice el repositorio de Github  y empecé a dejar hecha la programación básica del videojuego, como la lógica del runner, es decir, de los objetos que se instancian aleatoriamente y van desde el punto A al B. Además dejé montada una escena con unos assets de la asset store de unity.
 
