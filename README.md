@@ -57,4 +57,22 @@ Código enemigo
 
 <img width="477" height="617" alt="image" src="https://github.com/user-attachments/assets/5b32969b-f677-4c40-ad01-fe84de64b850" />
 
+## Día 25/11/25
+En este día hice el montado en físico del arduino. El botón con el led y de los dos potenciómetros.
+
+Imagen montado
+
+![IMG_1927](https://github.com/user-attachments/assets/64829027-21c0-4f3c-9177-bc11d878339e)
+
+Vídeo del montado en funcionamiento
+
+https://github.com/user-attachments/assets/18cf629b-58d9-43e6-b4b0-ccb478911465
+
+
+
+
+
+
+
+
 
