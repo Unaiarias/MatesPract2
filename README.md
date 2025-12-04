@@ -11,7 +11,9 @@ Realizo yo solo el proyecto.
 
 -Un botón
 
--Un contador
+-Un contador/Visualizador de 7 segmentos
+
+-Un LED
 
 -Cables y resistencias
 
@@ -68,8 +70,13 @@ Vídeo del montado en funcionamiento
 
 https://github.com/user-attachments/assets/18cf629b-58d9-43e6-b4b0-ccb478911465
 
+## Día 2/12/25
+En este día añadí en el Tinkercad un Visualizador de 7 segmentos para las vidas del player, además de hacrelo visualmente todo más aseado y también actualicé el Readme.
+También tuve que añadir cosas en el código.
 
+<img width="1521" height="1060" alt="image" src="https://github.com/user-attachments/assets/ae576020-4b9f-4e5b-936a-2923f7609b84" />
 
+<img width="597" height="1076" alt="image" src="https://github.com/user-attachments/assets/7d573727-474d-4ae7-a0fe-c24dc13ea646" />
 
 
 
