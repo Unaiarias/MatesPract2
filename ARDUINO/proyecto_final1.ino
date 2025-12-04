@@ -21,7 +21,7 @@ void setup() {
   }
   
   // Mostrar número 0
-  mostrarNumero(0);
+  mostrarNumero(3);
   
   pinMode(LED_BUILTIN, OUTPUT);
   
