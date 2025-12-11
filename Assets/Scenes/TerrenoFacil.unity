@@ -1490,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d572b3f8277eb418abe25b6b7c3500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArduinoInput
+  puertoCOM: COM7
   x: 0
   y: 0
   boton: 0

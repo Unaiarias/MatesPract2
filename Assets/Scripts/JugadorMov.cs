@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 using UnityEngine.UI;
 
 public class JugadorMov : MonoBehaviour
 {
-    public ArduinoInput arduino;   // ← AÑADIDO
+    public ArduinoInput arduino;
 
     public float velocidad = 5.0f;
     public float salto = 8.0f;
     public float gravedad = 9.8f;
+
     private Vector3 direccion = Vector3.zero;
 
     public Image barraDeVida;
 
     public float vidaActual;
-    public float vidaMaxima;
+    public float vidaMaxima = 100f;
 
     void Start()
     {
@@ -26,9 +26,11 @@ public class JugadorMov : MonoBehaviour
 
     void Update()
     {
+        // Evita valores negativos
+        vidaActual = Mathf.Clamp(vidaActual, 0, vidaMaxima);
+
         barraDeVida.fillAmount = vidaActual / vidaMaxima;
 
-        // ---- CONVERTIR VIDA (0–100) A 3–0 ----
         float porcentaje = vidaActual / vidaMaxima;
 
         int vidas = 0;
@@ -36,8 +38,8 @@ public class JugadorMov : MonoBehaviour
         else if (porcentaje > 0.33f) vidas = 2;
         else if (porcentaje > 0f) vidas = 1;
         else vidas = 0;
-
-        // ENVIAR AL ARDUINO
+        Debug.Log("VIDAS REALES = " + vidas);
+        // Enviar vidas al Arduino
         arduino.Enviar(vidas.ToString());
 
         if (barraDeVida.fillAmount == 0.0f)
@@ -47,7 +49,6 @@ public class JugadorMov : MonoBehaviour
 
         CharacterController controller = GetComponent<CharacterController>();
 
-        // ---- LEER POTENCIOMETROS ----
         float horizontal = Mathf.Lerp(-1f, 1f, arduino.x / 15f);
         float vertical = Mathf.Lerp(-1f, 1f, arduino.y / 2f);
 
@@ -57,8 +58,12 @@ public class JugadorMov : MonoBehaviour
             direccion = transform.TransformDirection(direccion);
             direccion *= velocidad;
 
+            // --- SALTAR CON BOTÓN DEL ARDUINO ---
             if (arduino.boton)
+            {
                 direccion.y = salto;
+                arduino.ResetBoton();  // ← Importante para evitar saltos múltiples
+            }
         }
 
         direccion.y -= gravedad * Time.deltaTime;
@@ -66,7 +71,7 @@ public class JugadorMov : MonoBehaviour
         Vector3 movimiento = direccion * Time.deltaTime;
         controller.Move(movimiento);
 
-        // ---- LIMITES EN Z ----
+        // Límites de Z
         if (vertical < 0 && transform.position.z > 82.0f)
             transform.position = new Vector3(transform.position.x, transform.position.y, 82.0f);
 

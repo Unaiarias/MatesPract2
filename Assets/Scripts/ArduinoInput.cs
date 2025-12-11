@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class ArduinoInput : MonoBehaviour
 {
-    public string puertoCOM = "COM3"; // CAMBIAR A TU PUERTO REAL
+    public string puertoCOM = "COM7";
     SerialPort puerto;
 
     public int x;
     public int y;
     public bool boton;
+
+    int ultimaVida = -1;
+
+    // --- DEBOUNCE ---
+    float cooldownBoton = 0.2f; // 200 ms
+    float tiempoUltimoPulsado = 0f;
 
     void Start()
     {
@@ -31,20 +37,30 @@ public class ArduinoInput : MonoBehaviour
             }
             else if (linea == "BOTON_PULSADO")
             {
-                boton = true;
+                // --- DEBOUNCE ---
+                if (Time.time - tiempoUltimoPulsado > cooldownBoton)
+                {
+                    boton = true;
+                    tiempoUltimoPulsado = Time.time;
+                }
             }
         }
         catch { }
-
-        // Reset del botón cada frame
-        boton = false;
     }
 
     public void Enviar(string msg)
     {
-        if (puerto.IsOpen)
+        int valor = int.Parse(msg);
+
+        if (puerto.IsOpen && valor != ultimaVida)
         {
             puerto.WriteLine(msg);
+            ultimaVida = valor;
         }
+    }
+
+    public void ResetBoton()
+    {
+        boton = false;
     }
 }
