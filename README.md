@@ -1,6 +1,6 @@
 ## Objetivo del proyecto
-El objetivo de este proyecto es conectar los componentes físicos de arduino con el proyecto de unity de infinity runner que tengo. Voy a poner dos potenciómetros, uno para el movimiento de izquierda a derecha y el otro para el de arriba y abajo, luego voy a añadir un pulsador que hará la función de disparo dentro dentro del juego y por último quiero añadir un contador físico donde te vaya indicando las vidas restantes que le quedan al jugador.
-En el proyecto de unity que tengo, tendré que cambiar varias cosas para que quede más resultón el juego y dejarlo como un juego de naves donde te vienen objetos que tienes que esquivar y enemigos que te disparan, mientras utilizas el disparo para abrirte paso y aguantar el máximo tiempo posible con las tres vidas disponibles que tienes.
+El objetivo de este proyecto es conectar los componentes físicos de arduino con el proyecto de unity de infinity runner que tengo. Voy a poner dos potenciómetros, uno para el movimiento de izquierda a derecha y el otro para el de arriba y abajo, luego voy a añadir un pulsador que hará la función de salto dentro del juego y por último quiero añadir un contador físico donde te vaya indicando las vidas restantes que le quedan al jugador.
+El proyecto de unity está ambientado en una ciudad donde tienes que esquivar obstáculos y esquivar a los policias que te disparan, solo teniendo tres vidas disponibles.
 ## Equipos y Roles
 Realizo yo solo el proyecto.
 ## Plan de Sprints
@@ -77,6 +77,32 @@ También tuve que añadir cosas en el código.
 <img width="1521" height="1060" alt="image" src="https://github.com/user-attachments/assets/ae576020-4b9f-4e5b-936a-2923f7609b84" />
 
 <img width="597" height="1076" alt="image" src="https://github.com/user-attachments/assets/7d573727-474d-4ae7-a0fe-c24dc13ea646" />
+
+## Día 4/12/25
+Este día tuve que montar todo mi arduino entero con todos los componentes, comprobé que el arduino hacia los prints para así luego meterlo todo en Unity. Luego hice la conexión entre mi arduino y el Unity, dejando heho el movimiento del player con los dos potenciómetros.
+También actualicé el Readme.
+
+![IMG_1969](https://github.com/user-attachments/assets/c0064d74-84a4-4ae9-b71d-079e202ca9ee)
+
+https://github.com/user-attachments/assets/9fa1c2f5-9242-4efa-8f75-cf6a393951a8
+
+https://github.com/user-attachments/assets/da484e8c-f701-4071-9b30-cf60605355bd
+
+## Día 11/12/25
+Este día tuve que volver a montar todo el arduino e hice todas las conexiones que me faltaban. Conecté el botón para que el player pudiera saltar y el contador de vidas para que fuera bajando según recibia daño.
+Tuve que tocar el código de arduino para poder pasar desde unity las vidas al arduino y que se fueran actualizando correctamente, creo que esta parte fue las más complicada de realizar, ya que me llevó mucho tiempo y tuve varios problemas.
+Dejé el proyecto ya hecho por completo, lo único que no me dió tiempo a dejarlo todo grabado.
+
+Código:
+
+<img width="392" height="826" alt="image" src="https://github.com/user-attachments/assets/1b8cb23a-ae61-4cf4-840b-37bcafce149b" />
+
+## Día 16/12/25
+Este día dejé todo el Readme actualizado, comprobé que todo del proyecto seguía funcionando bien y grabé un vídeo de como funcionaba.
+
+Video:
+
+https://github.com/user-attachments/assets/2a23e492-364a-4d93-aee8-5a0607a0b51d
 
 
 
